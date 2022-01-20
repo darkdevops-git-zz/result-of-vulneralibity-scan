@@ -60,12 +60,6 @@
 
         <!-- Loader -->
         <style>
-            .fix-menu {
-                position: fixed;
-                width:100%;
-                z-index: 9998
-            }
-    
             .loader {
                 position: fixed;
                 top: 0px;
@@ -120,8 +114,46 @@
         <div class="loader">
             <div class="loader-icon"></div>
         </div>
+        <!-- /.Loader -->
+        <!-- Nav -->
+        <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-orange">
+            <div class="container-fluid">
+              <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active trapeze" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle trapeze" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      PHP <i class="fas fa-sort-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Php-fpm</a></li>
+                      <li><a class="dropdown-item" href="#">Php-fpm-redis</a></li>
+                      <li><a class="dropdown-item" href="#">Php-fpm-mysql</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle trapeze" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Framework <i class="fas fa-sort-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Laravel</a></li>
+                      <li><a class="dropdown-item" href="#">CodeIgniter</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <!-- /.Nav -->
         <!-- JavaScript files-->
         <script src="assets/js/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+        <script src="https://kit.fontawesome.com/71702cb52c.js" media="screen" crossorigin="anonymous"></script>
         <script>$(window).on('load', function() {$('.loader').fadeOut(1000);});</script>
     </body>
 </html>
