@@ -1,3 +1,4 @@
+/* Default */
 html,
 body {
 	width: 100%;
@@ -5,6 +6,7 @@ body {
 	font-family: "Open Sans", sans-serif;
 	font-size: 14px;
 	background: #272727;
+	color: #fff;
 }
 
 a {
@@ -13,6 +15,7 @@ a {
 	-moz-transition: all 0.35s ease 0s;
 }
 
+/* Navigation menu */
 .bg-orange {
 	background-color: rgba(243, 202, 47, 0.6) !important;
 	border-bottom: 2px solid #fff !important;
@@ -72,4 +75,30 @@ a {
 		background: #272727;
 		margin-top: 10px;
 	}
+}
+
+/* header */
+header {
+	background: url("../img/background.jpg");
+	font-family: "Oswald", sans-serif;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 1080px;
+	transition: all 0.35s ease 0s;
+	-webkit-transition: all 0.35s ease 0s;
+	-moz-transition: all 0.35s ease 0s;
+	overflow: hidden;
+}
+header .header-content {
+	margin-top: 220px;
+}
+.header-content h1 {
+	font-size: 44px;
+	margin-bottom: 28px;
+	text-transform: uppercase;
+	color: #f3ca2f;
+}
+
+.header-content h2 {
+	text-transform: uppercase;
 }
