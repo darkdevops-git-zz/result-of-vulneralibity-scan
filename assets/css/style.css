@@ -9,10 +9,43 @@ body {
 	color: #fff;
 }
 
-a {
-	transition: all 0.35s ease 0s;
-	-webkit-transition: all 0.35s ease 0s;
-	-moz-transition: all 0.35s ease 0s;
+.angle::before {
+	border-bottom: 72px solid #333;
+	border-right: 960px solid transparent;
+	left: 0;
+}
+.angle::before,
+.angle::after {
+	bottom: 0;
+	content: "";
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 4;
+}
+.angle::after {
+	border-bottom: 72px solid #333;
+	border-left: 960px solid transparent;
+	right: 0;
+}
+.angle2::before {
+	border-top: 72px solid #333;
+	border-right: 960px solid transparent;
+	left: 0;
+}
+.angle2::before,
+.angle2::after {
+	top: 0;
+	content: "";
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 4;
+}
+.angle2::after {
+	border-top: 72px solid #333;
+	border-left: 960px solid transparent;
+	right: 0;
 }
 
 /* Navigation menu */
@@ -83,7 +116,7 @@ header {
 	font-family: "Oswald", sans-serif;
 	background-attachment: fixed;
 	background-size: cover;
-	height: 1080px;
+	height: 100%;
 	transition: all 0.35s ease 0s;
 	-webkit-transition: all 0.35s ease 0s;
 	-moz-transition: all 0.35s ease 0s;
@@ -101,4 +134,36 @@ header .header-content {
 
 .header-content h2 {
 	text-transform: uppercase;
+}
+
+/* php */
+#php {
+	background-color: #0e0e0e;
+	background-size: 10%;
+	position: relative;
+	padding: 120px 0;
+	width: 100%;
+	overflow: hidden;
+	font-size: 20px;
+}
+#php h2,
+h3 {
+	font-size: 42px !important;
+	text-transform: uppercase;
+	font-family: "Oswald";
+}
+#php h2 span {
+	color: #f3ca2f;
+	text-transform: uppercase;
+}
+#php ul li {
+	list-style: none;
+}
+#php ul li a {
+	color: #f3ca2f;
+	text-decoration: none;
+}
+#php ul li a:hover {
+	color: #fff;
+	text-decoration: none;
 }
