@@ -136,8 +136,9 @@ header .header-content {
 	text-transform: uppercase;
 }
 
-/* php */
-#php {
+/* php, framework */
+#php,
+#framework {
 	background-color: #0e0e0e;
 	background-size: 10%;
 	position: relative;
@@ -147,23 +148,40 @@ header .header-content {
 	font-size: 20px;
 }
 #php h2,
-h3 {
+#php h3,
+#framework h2,
+#framework h3 {
 	font-size: 42px !important;
 	text-transform: uppercase;
 	font-family: "Oswald";
 }
-#php h2 span {
+#php h2 span,
+#framework h2 span {
 	color: #f3ca2f;
 	text-transform: uppercase;
 }
-#php ul li {
+#php ul li,
+#framework ul li {
 	list-style: none;
 }
-#php ul li a {
+#php ul li a,
+#framework ul li a {
 	color: #f3ca2f;
 	text-decoration: none;
 }
-#php ul li a:hover {
+#php ul li a:hover,
+#framework ul li a:hover {
 	color: #fff;
 	text-decoration: none;
+}
+
+#framework::before {
+	background: rgba(255, 255, 255, 0.5);
+	content: "";
+	height: 10%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
