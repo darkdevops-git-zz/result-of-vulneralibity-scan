@@ -157,6 +157,7 @@ header .header-content {
 	font-size: 42px !important;
 	text-transform: uppercase;
 	font-family: "Oswald";
+	padding-top: 100px;
 }
 #php h2 span,
 #framework h2 span,
