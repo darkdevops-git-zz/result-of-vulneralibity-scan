@@ -1,0 +1,52 @@
+name: Release CI
+on:
+  workflow_dispatch:
+    branches: [develop]
+
+jobs:
+  startRelease:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Create release branch
+        run: |
+          if [ $(grep -w "SNAPSHOT" version.txt) ];then RELEASE_VERSION=`echo $(cut -f1 -d'-' version.txt)`; else echo "version.txt is not valid";exit 1; fi
+          COMMIT_MESSAGE="Set release version to ${RELEASE_VERSION}"
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git fetch origin release/${RELEASE_VERSION} 2> /dev/null || true
+
+          if [ $(git branch -rl "origin/release/${RELEASE_VERSION}") ]; then
+            echo "Release release/${RELEASE_VERSION} branch already exists"
+            exit 1
+          else
+            git checkout -b release/${RELEASE_VERSION}
+            echo "${RELEASE_VERSION}" > version.txt
+            git add version.txt
+            git commit -m"${COMMIT_MESSAGE}"
+            git push origin release/${RELEASE_VERSION}
+          fi
+
+  startNextDevelopmentVersion:
+    needs: startRelease
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Create release branch
+        run: |
+          if [ $(grep -w "SNAPSHOT" version.txt) ];then NEXT_DEVELOP_VERSION=`echo $(cat version.txt) | awk -v FS=.  -v NF=2 '{$2=$2+1}2'| sed 's/ /./g'`; else echo "version.txt is not valid";exit 1; fi
+          COMMIT_MESSAGE="Set next development version to ${NEXT_DEVELOP_VERSION}"
+
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+          git fetch origin develop
+          git checkout develop
+          echo "${NEXT_DEVELOP_VERSION}" > version.txt
+          git add version.txt
+          git commit -m"${COMMIT_MESSAGE}"
+          git push origin develop

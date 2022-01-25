@@ -1,0 +1,230 @@
+/* Default */
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	background: #272727;
+	color: #fff;
+}
+
+.angle::before {
+	border-bottom: 72px solid #333;
+	border-right: 960px solid transparent;
+	left: 0;
+}
+.angle::before,
+.angle::after {
+	bottom: 0;
+	content: "";
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 4;
+}
+.angle::after {
+	border-bottom: 72px solid #333;
+	border-left: 960px solid transparent;
+	right: 0;
+}
+.angle2::before {
+	border-top: 72px solid #333;
+	border-right: 960px solid transparent;
+	left: 0;
+}
+.angle2::before,
+.angle2::after {
+	top: 0;
+	content: "";
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 4;
+}
+.angle2::after {
+	border-top: 72px solid #333;
+	border-left: 960px solid transparent;
+	right: 0;
+}
+
+/* Navigation menu */
+.bg-orange {
+	background-color: rgba(243, 202, 47, 0.6) !important;
+	border-bottom: 2px solid #fff !important;
+}
+
+.trapeze:after {
+	content: "";
+	border: none;
+	position: absolute;
+	background: #272727;
+	width: 18px;
+	height: 40px;
+	left: -11px;
+	bottom: 0px;
+	transform: skew(-20deg);
+}
+
+.trapeze:before {
+	content: "";
+	border: none;
+	position: absolute;
+	background: #272727;
+	width: 18px;
+	height: 40px;
+	right: -10px;
+	bottom: 0px;
+	transform: skew(-20deg);
+}
+
+.trapeze {
+	display: block;
+	text-align: center;
+	line-height: 25px;
+	font-size: 16px;
+	position: relative;
+	text-decoration: none;
+	margin-left: 20px;
+	margin-right: 11px;
+	width: 150px;
+	height: 40px;
+	background: #272727;
+	margin-top: 10px;
+}
+
+@media (max-width: 992px) {
+	.trapeze {
+		display: block;
+		text-align: center;
+		line-height: 25px;
+		font-size: 16px;
+		position: relative;
+		text-decoration: none;
+		margin-left: 20px;
+		margin-right: 10px;
+		width: calc(100% - 40px);
+		height: 40px;
+		background: #272727;
+		margin-top: 10px;
+	}
+}
+
+/* header */
+header {
+	background: url("../img/background.jpg");
+	font-family: "Oswald", sans-serif;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%;
+	transition: all 0.35s ease 0s;
+	-webkit-transition: all 0.35s ease 0s;
+	-moz-transition: all 0.35s ease 0s;
+	overflow: hidden;
+}
+header .header-content {
+	margin-top: 220px;
+}
+.header-content h1 {
+	font-size: 44px;
+	margin-bottom: 28px;
+	text-transform: uppercase;
+	color: #f3ca2f;
+}
+
+.header-content h2 {
+	text-transform: uppercase;
+}
+
+/* php, framework, tools */
+#php,
+#framework,
+#tools {
+	background-color: #0e0e0e;
+	background-size: 10%;
+	position: relative;
+	padding: 120px 0;
+	width: 100%;
+	overflow: hidden;
+	font-size: 20px;
+}
+#php h2,
+#php h3,
+#framework h2,
+#framework h3,
+#tools h2,
+#tools h3 {
+	font-size: 42px !important;
+	text-transform: uppercase;
+	font-family: "Oswald";
+	padding-top: 100px;
+}
+#php h2 span,
+#framework h2 span,
+#tools h2 span {
+	color: #f3ca2f;
+	text-transform: uppercase;
+}
+#php ul li,
+#framework ul li,
+#tools ul li {
+	list-style: none;
+}
+#php ul li a,
+#framework ul li a,
+#tools ul li a {
+	color: #f3ca2f;
+	text-decoration: none;
+}
+#php ul li a:hover,
+#framework ul li a:hover,
+#tools ul li a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+#framework::before {
+	background: #222;
+	content: "";
+	height: 10%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* footer */
+#footer {
+	background: #333 none repeat scroll 0 0;
+	color: #fff;
+	padding: 60px 0 120px;
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+#footer .social-links {
+	border-bottom: 2px dashed #afafaf;
+	border-top: 2px dashed #afafaf;
+	list-style: outside none none;
+	margin: 0 0 20px;
+	padding: 35px 0;
+}
+#footer .social-links li {
+	display: inline-block;
+	margin: 5px;
+}
+#footer .social-links a {
+	border: 1px solid #f3ca2f;
+	border-radius: 3px;
+	color: #afafaf;
+	display: block;
+	font-size: 14px;
+	height: 36px;
+	line-height: 35px;
+	text-align: center;
+	width: 36px;
+}
+#footer .social-links a:hover {
+	border: 1px solid #fff;
+	color: #fff;
+}
